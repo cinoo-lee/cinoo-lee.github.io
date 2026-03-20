@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinoo Lee</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-name">Cinoo Lee</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name">Cinoo Lee</h1>
+      <p class="hero-tagline">Software Engineer &amp; Creative Thinker</p>
+      <div class="hero-line"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <p>
+          I'm a software engineer passionate about building elegant solutions
+          to complex problems. I enjoy working across the full stack, with a
+          keen eye for clean design and thoughtful user experiences.
+        </p>
+        <p>
+          When I'm not coding, you'll find me exploring new technologies,
+          reading, or working on side projects that push me to learn
+          something new.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" class="section work">
+    <div class="container">
+      <h2 class="section-title">Work</h2>
+      <div class="work-grid">
+        <div class="work-card">
+          <span class="work-number">01</span>
+          <h3>Project One</h3>
+          <p>A brief description of a project you've worked on. Replace this with your own work.</p>
+          <a href="#" class="work-link">View Project &rarr;</a>
+        </div>
+        <div class="work-card">
+          <span class="work-number">02</span>
+          <h3>Project Two</h3>
+          <p>A brief description of another project. Highlight what makes it interesting.</p>
+          <a href="#" class="work-link">View Project &rarr;</a>
+        </div>
+        <div class="work-card">
+          <span class="work-number">03</span>
+          <h3>Project Three</h3>
+          <p>One more project to showcase your skills and experience.</p>
+          <a href="#" class="work-link">View Project &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-text">
+        I'm always open to interesting conversations and opportunities.<br>
+        Feel free to reach out.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:your@email.com" class="contact-link">Email</a>
+        <a href="https://github.com/cinoolee" class="contact-link">GitHub</a>
+        <a href="https://linkedin.com/in/cinoolee" class="contact-link">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Cinoo Lee</p>
+  </footer>
+
+  <script>
+    // Scroll-triggered section fade-in
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
