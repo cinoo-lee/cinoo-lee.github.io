@@ -174,6 +174,16 @@ h1, h2, h3 {
   margin: 0 auto;
 }
 
+.hero-sub {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #999;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
 /* ========================================
    About
    ======================================== */
@@ -196,62 +206,132 @@ h1, h2, h3 {
   margin-bottom: 0;
 }
 
-/* ========================================
-   Work
-   ======================================== */
-
-.work-grid {
+.about-details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.work-card {
-  padding: 2.5rem 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 4px;
-  background: #fff;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
-}
-
-.work-number {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #e0d5c9;
-  display: block;
+.detail-group h3 {
+  font-size: 1.2rem;
   margin-bottom: 1rem;
-}
-
-.work-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
   color: #1a1a1a;
 }
 
-.work-card p {
-  font-size: 0.95rem;
-  color: #777;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
+.detail-group ul {
+  list-style: none;
 }
 
-.work-link {
-  font-size: 0.85rem;
+.detail-group li {
+  font-size: 0.95rem;
+  color: #666;
+  padding: 0.35rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.detail-group li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #b08d6e;
+}
+
+/* ========================================
+   Publications
+   ======================================== */
+
+.publications {
+  background: #fff;
+}
+
+.pub-category {
+  font-size: 1.15rem;
+  color: #b08d6e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.pub-category:first-of-type {
+  margin-top: 0;
+}
+
+.pub-list {
+  margin-bottom: 2rem;
+}
+
+.pub-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-authors {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.4rem;
+}
+
+.pub-authors strong {
+  color: #2c2c2c;
+  font-weight: 500;
+}
+
+.pub-title {
+  font-size: 1.05rem;
+  color: #1a1a1a;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  margin-bottom: 0.3rem;
+  line-height: 1.5;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.3rem;
+}
+
+.pub-note {
+  font-size: 0.8rem;
+  color: #b08d6e;
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.pub-link {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
   color: #b08d6e;
   transition: color 0.3s ease;
 }
 
-.work-link:hover {
+.pub-link:hover {
   color: #8a6a4e;
 }
+
+.pub-footnote {
+  font-size: 0.8rem;
+  color: #aaa;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+
 
 /* ========================================
    Contact
@@ -361,6 +441,11 @@ h1, h2, h3 {
   .contact-link {
     width: 200px;
     text-align: center;
+  }
+
+  .about-details {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
