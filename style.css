@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 20px;
 }
 
 body {
@@ -20,6 +20,8 @@ body {
   background-color: #faf9f7;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  min-height: 100vh;
 }
 
 a {
@@ -38,141 +40,112 @@ h1, h2, h3 {
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
   margin-bottom: 1.5rem;
 }
 
 /* ========================================
-   Layout
+   Sidebar
    ======================================== */
 
-.container {
-  max-width: 780px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.section {
-  padding: 3rem 0;
-}
-
-.divider {
-  border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  max-width: 780px;
-  margin: 0 auto;
-}
-
-/* ========================================
-   Navigation
-   ======================================== */
-
-.nav {
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 100;
+  width: 220px;
+  height: 100vh;
+  padding: 2.5rem 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 3rem;
-  background: rgba(250, 249, 247, 0.95);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.nav-name {
+.sidebar-name {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  color: #1a1a1a;
 }
 
-.nav-links {
+.sidebar-links {
+  list-style: none;
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.nav-links a {
+.sidebar-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  color: #b08d6e;
+}
+
+.sidebar-links svg {
+  flex-shrink: 0;
+}
+
+.sidebar-email {
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sidebar-nav a {
   font-size: 0.82rem;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #777;
   transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.sidebar-nav a:hover {
   color: #b08d6e;
 }
 
 /* ========================================
-   Header
+   Main Content
    ======================================== */
 
-.header {
-  padding-top: 5.5rem;
-  padding-bottom: 1.5rem;
+.main {
+  margin-left: 220px;
+  max-width: 720px;
+  padding: 2.5rem 3rem;
+  flex: 1;
 }
 
-.header-name {
-  font-size: 1.6rem;
-  line-height: 1.3;
-  margin-bottom: 0.3rem;
-  color: #1a1a1a;
+.section {
+  padding: 2rem 0;
 }
 
-.header-tagline {
-  font-size: 0.92rem;
-  color: #777;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.6rem;
+.section:first-child {
+  padding-top: 0;
 }
 
-.header-sub {
-  font-size: 0.88rem;
-  color: #999;
-  max-width: 520px;
-  line-height: 1.7;
-}
-
-.header-links {
-  list-style: none;
-  margin-top: 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.header-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.88rem;
-  color: #777;
-  transition: color 0.2s ease;
-}
-
-.header-links a:hover {
-  color: #b08d6e;
-}
-
-.header-links svg {
-  flex-shrink: 0;
+.divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 /* ========================================
    About
    ======================================== */
 
-.about-content {
-  max-width: 640px;
-}
-
 .about-content p {
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   color: #555;
   margin-bottom: 1rem;
 }
@@ -181,13 +154,12 @@ h1, h2, h3 {
   margin-bottom: 0;
 }
 
-
 /* ========================================
    Publications
    ======================================== */
 
 .pub-category {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #b08d6e;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -210,7 +182,7 @@ h1, h2, h3 {
 }
 
 .pub-authors {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: #aaa;
   margin-bottom: 0.15rem;
 }
@@ -222,7 +194,7 @@ h1, h2, h3 {
 
 .pub-title {
   display: block;
-  font-size: 0.98rem;
+  font-size: 0.95rem;
   color: #1a1a1a;
   font-weight: 400;
   margin-bottom: 0.2rem;
@@ -236,23 +208,45 @@ a.pub-title:hover {
 }
 
 .pub-venue {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: #777;
   margin-bottom: 0.2rem;
 }
 
 .pub-note {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #b08d6e;
   font-style: italic;
   margin-bottom: 0.3rem;
 }
 
 .pub-footnote {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: #aaa;
   font-style: italic;
   margin-top: 0.5rem;
+}
+
+/* ========================================
+   Teaching
+   ======================================== */
+
+.teaching-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.teaching-term {
+  flex-shrink: 0;
+  width: 130px;
+  color: #999;
+  font-size: 0.82rem;
+}
+
+.teaching-course {
+  color: #555;
 }
 
 /* ========================================
@@ -260,9 +254,8 @@ a.pub-title:hover {
    ======================================== */
 
 .footer {
-  padding: 2.5rem 2rem;
-  text-align: center;
-  font-size: 0.78rem;
+  padding: 2.5rem 0;
+  font-size: 0.75rem;
   color: #bbb;
   letter-spacing: 0.05em;
 }
@@ -272,44 +265,34 @@ a.pub-title:hover {
    ======================================== */
 
 @media (max-width: 768px) {
-  .nav {
-    padding: 1rem 1.5rem;
+  body {
+    flex-direction: column;
   }
 
-  .nav-links {
-    gap: 1.5rem;
+  .sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
   }
 
-  .nav-links a {
-    font-size: 0.75rem;
+  .sidebar-links {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 1.5rem 2rem;
   }
 
   .section {
-    padding: 2.5rem 0;
-  }
-
-  .header {
-    padding-top: 5.5rem;
-    padding-bottom: 2rem;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .contact-link {
-    text-align: center;
-  }
-
-}
-
-@media (max-width: 480px) {
-  .nav-name {
-    font-size: 1rem;
-  }
-
-  .nav-links {
-    gap: 1rem;
+    padding: 1.5rem 0;
   }
 }
