@@ -22,19 +22,19 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-greeting">Hello, I'm</p>
-      <h1 class="hero-name">Cinoo Lee</h1>
-      <p class="hero-tagline">Senior Applied Scientist &middot; Microsoft</p>
-      <div class="hero-line"></div>
-      <p class="hero-sub">Research at the intersection of AI, social psychology, and computational social science.</p>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="header-name">Cinoo Lee</h1>
+      <p class="header-tagline">Senior Applied Scientist &middot; Microsoft</p>
+      <p class="header-sub">Research at the intersection of AI, social psychology, and computational social science.</p>
     </div>
-  </section>
+  </header>
+
+  <hr class="divider">
 
   <!-- About -->
-  <section id="about" class="section about">
+  <section id="about" class="section">
     <div class="container">
       <h2 class="section-title">About</h2>
       <div class="about-content">
@@ -42,10 +42,10 @@
           I'm a Senior Applied Scientist at Microsoft, working at the intersection of artificial intelligence and social psychology.
         </p>
         <p>
-          I completed my Ph.D. in Social Psychology at Stanford University, advised by Jennifer Eberhardt, Hazel Markus, and Dan Jurafsky. Before that, I earned my B.A. in Psychology with honors from Rice University.
+          I completed my Ph.D. in Social Psychology at Stanford University, mentored by Jennifer Eberhardt, Hazel Markus, and Dan Jurafsky. Before that, I earned my B.A. in Psychology with Honors from Rice University.
         </p>
         <p>
-          My work has been featured in <em>MIT Technology Review</em>, <em>The Guardian</em>, <em>NPR</em>, and <em>Venture Beat</em>.
+          My work has been featured in <em>NPR</em>, <em>MIT Technology Review</em>, <em>The Guardian</em>, and <em>Business Insider</em>.
         </p>
       </div>
 
@@ -55,7 +55,7 @@
           <ul>
             <li>Postdoc — Stanford SPARQ</li>
             <li>Ph.D., Social Psychology — Stanford University</li>
-            <li>B.A., Psychology (Honors, <em>cum laude</em>) — Rice University</li>
+            <li>B.A., Psychology with Honors — Rice University</li>
           </ul>
         </div>
         <div class="detail-group">
@@ -71,8 +71,10 @@
     </div>
   </section>
 
+  <hr class="divider">
+
   <!-- Publications -->
-  <section id="publications" class="section publications">
+  <section id="publications" class="section">
     <div class="container">
       <h2 class="section-title">Publications</h2>
 
@@ -83,7 +85,7 @@
           <p class="pub-authors">Yu, S., Chang, M., <strong>Lee, C.</strong>, Khadpe, P., &amp; Jurafsky, D.</p>
           <p class="pub-title">ELEPHANT: Measuring and understanding social sycophancy in LLMs.</p>
           <p class="pub-venue">Accepted at <em>ICLR 2026</em>.</p>
-          <p class="pub-note">Featured in MIT Technology Review, Venture Beat, NPR</p>
+          <p class="pub-note">Featured in NPR, MIT Technology Review, Venture Beat</p>
           <a href="https://arxiv.org/abs/2505.13995" class="pub-link" target="_blank" rel="noopener">arXiv &rarr;</a>
         </div>
 
@@ -122,7 +124,6 @@
         <div class="pub-item">
           <p class="pub-authors">Cheng, M., <strong>Lee, C.</strong>, Khadpe, P., Yu, S., Han, D., &amp; Jurafsky, D.</p>
           <p class="pub-title">Sycophantic AI decreases prosocial intentions and promotes dependence.</p>
-          <p class="pub-venue">Under review.</p>
           <p class="pub-note">Featured in The Guardian</p>
           <a href="https://arxiv.org/abs/2505.13995" class="pub-link" target="_blank" rel="noopener">arXiv &rarr;</a>
         </div>
@@ -130,7 +131,6 @@
         <div class="pub-item">
           <p class="pub-authors">Hamedani, M.*, Gligorić, K.*, <strong>Lee, C.</strong>*, Zhao, X., Markus, H., &amp; Eberhardt, J.L.</p>
           <p class="pub-title">Large-scale field interventions to support constructive conversations in online communities.</p>
-          <p class="pub-venue">Under review at <em>PNAS</em>.</p>
         </div>
       </div>
 
@@ -138,17 +138,17 @@
     </div>
   </section>
 
+  <hr class="divider">
+
   <!-- Contact -->
-  <section id="contact" class="section contact">
+  <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <p class="contact-text">
-        I'm always open to interesting conversations and collaborations.<br>
-        Feel free to reach out.
+        I'm always open to interesting conversations and collaborations. Feel free to reach out.
       </p>
       <div class="contact-links">
         <a href="mailto:cinoolee@microsoft.com" class="contact-link">Email</a>
-        <a href="https://github.com/cinoo-lee" class="contact-link" target="_blank" rel="noopener">GitHub</a>
         <a href="https://scholar.google.com/citations?user=uTXKGA8AAAAJ" class="contact-link" target="_blank" rel="noopener">Google Scholar</a>
       </div>
     </div>
@@ -158,19 +158,6 @@
   <footer class="footer">
     <p>&copy; 2026 Cinoo Lee</p>
   </footer>
-
-  <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.15 });
-
-    sections.forEach(section => observer.observe(section));
-  </script>
 
 </body>
 </html>
