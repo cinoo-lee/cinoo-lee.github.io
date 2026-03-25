@@ -113,29 +113,54 @@ h1, h2, h3 {
    ======================================== */
 
 .header {
-  padding-top: 7rem;
-  padding-bottom: 2.5rem;
+  padding-top: 5.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .header-name {
-  font-size: clamp(2.4rem, 5vw, 3.5rem);
-  line-height: 1.15;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
   color: #1a1a1a;
 }
 
 .header-tagline {
-  font-size: 1.05rem;
+  font-size: 0.92rem;
   color: #777;
   letter-spacing: 0.02em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .header-sub {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: #999;
   max-width: 520px;
   line-height: 1.7;
+}
+
+.header-links {
+  list-style: none;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.header-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.header-links a:hover {
+  color: #b08d6e;
+}
+
+.header-links svg {
+  flex-shrink: 0;
 }
 
 /* ========================================
@@ -156,43 +181,6 @@ h1, h2, h3 {
   margin-bottom: 0;
 }
 
-.about-details {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.detail-group h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-  color: #1a1a1a;
-}
-
-.detail-group ul {
-  list-style: none;
-}
-
-.detail-group li {
-  font-size: 0.9rem;
-  color: #666;
-  padding: 0.25rem 0;
-  padding-left: 0.9rem;
-  position: relative;
-}
-
-.detail-group li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.75rem;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #b08d6e;
-}
 
 /* ========================================
    Publications
@@ -218,18 +206,13 @@ h1, h2, h3 {
 }
 
 .pub-item {
-  padding: 1.2rem 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-.pub-item:last-child {
-  border-bottom: none;
+  padding: 0.7rem 0;
 }
 
 .pub-authors {
-  font-size: 0.85rem;
-  color: #888;
-  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-bottom: 0.15rem;
 }
 
 .pub-authors strong {
@@ -238,11 +221,18 @@ h1, h2, h3 {
 }
 
 .pub-title {
+  display: block;
   font-size: 0.98rem;
   color: #1a1a1a;
   font-weight: 400;
   margin-bottom: 0.2rem;
   line-height: 1.5;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.pub-title:hover {
+  color: #b08d6e;
 }
 
 .pub-venue {
@@ -258,55 +248,11 @@ h1, h2, h3 {
   margin-bottom: 0.3rem;
 }
 
-.pub-link {
-  font-size: 0.78rem;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: #b08d6e;
-  transition: color 0.2s ease;
-}
-
-.pub-link:hover {
-  color: #8a6a4e;
-}
-
 .pub-footnote {
   font-size: 0.78rem;
   color: #aaa;
   font-style: italic;
   margin-top: 0.5rem;
-}
-
-/* ========================================
-   Contact
-   ======================================== */
-
-.contact-text {
-  font-size: 0.98rem;
-  color: #777;
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
-}
-
-.contact-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.contact-link {
-  font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.6rem 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  transition: all 0.2s ease;
-}
-
-.contact-link:hover {
-  border-color: #b08d6e;
-  color: #b08d6e;
 }
 
 /* ========================================
@@ -356,10 +302,6 @@ h1, h2, h3 {
     text-align: center;
   }
 
-  .about-details {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
