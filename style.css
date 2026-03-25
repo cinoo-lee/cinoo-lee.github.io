@@ -97,13 +97,26 @@ h1, h2, h3 {
   color: #777;
 }
 
-.sidebar-nav {
+/* ========================================
+   Top Navigation
+   ======================================== */
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 220px;
+  right: 0;
+  z-index: 100;
   display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  background: rgba(250, 249, 247, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-.sidebar-nav a {
+.topnav a {
   font-size: 0.82rem;
   font-weight: 400;
   letter-spacing: 0.04em;
@@ -112,7 +125,7 @@ h1, h2, h3 {
   transition: color 0.2s ease;
 }
 
-.sidebar-nav a:hover {
+.topnav a:hover {
   color: #b08d6e;
 }
 
@@ -122,6 +135,7 @@ h1, h2, h3 {
 
 .main {
   margin-left: 220px;
+  margin-top: 3rem;
   max-width: 720px;
   padding: 2.5rem 3rem;
   flex: 1;
@@ -155,6 +169,19 @@ h1, h2, h3 {
 }
 
 /* ========================================
+   Contact
+   ======================================== */
+
+.contact-section {
+  padding-top: 0;
+}
+
+.contact-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========================================
    Publications
    ======================================== */
 
@@ -177,13 +204,17 @@ h1, h2, h3 {
   margin-bottom: 1.5rem;
 }
 
+.pub-list:last-of-type {
+  margin-bottom: 0;
+}
+
 .pub-item {
   padding: 0.7rem 0;
 }
 
 .pub-authors {
   font-size: 0.78rem;
-  color: #aaa;
+  color: #888;
   margin-bottom: 0.15rem;
 }
 
@@ -282,13 +313,16 @@ a.pub-title:hover {
     gap: 1.25rem;
   }
 
-  .sidebar-nav {
-    flex-direction: row;
-    gap: 1.25rem;
+  .topnav {
+    position: static;
+    left: 0;
+    padding: 1rem 2rem;
+    gap: 1.5rem;
   }
 
   .main {
     margin-left: 0;
+    margin-top: 0;
     padding: 1.5rem 2rem;
   }
 
