@@ -207,7 +207,7 @@ h1, h2, h3 {
 
 .contact-text {
   font-size: 0.95rem;
-  color: #555;
+  color: #333;
 }
 
 /* ========================================
@@ -243,7 +243,7 @@ h1, h2, h3 {
 
 .pub-authors {
   font-size: 0.78rem;
-  color: #888;
+  color: #666;
   margin-bottom: 0.15rem;
 }
 
@@ -269,7 +269,7 @@ a.pub-title:hover {
 
 .pub-venue {
   font-size: 0.82rem;
-  color: #777;
+  color: #555;
   margin-bottom: 0.2rem;
 }
 
@@ -301,12 +301,12 @@ a.pub-title:hover {
 .teaching-term {
   flex-shrink: 0;
   width: 130px;
-  color: #999;
+  color: #777;
   font-size: 0.82rem;
 }
 
 .teaching-course {
-  color: #555;
+  color: #333;
 }
 
 /* ========================================
