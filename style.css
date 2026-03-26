@@ -152,7 +152,7 @@ h1, h2, h3 {
 
 .main {
   max-width: 720px;
-  padding: 2.5rem 3rem;
+  padding: 0 3rem 2.5rem;
   flex: 1;
 }
 
