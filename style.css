@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 /* ========================================
    Typography
    ======================================== */
@@ -77,6 +81,12 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.sidebar-name:hover,
+.sidebar-links a:hover,
+.topnav a:hover {
+  text-decoration: none;
 }
 
 .sidebar-name {
