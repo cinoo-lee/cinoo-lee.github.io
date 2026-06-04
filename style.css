@@ -384,7 +384,8 @@ a.pub-title:hover {
     position: static;
     left: 0;
     padding: 1rem 2rem;
-    gap: 1.5rem;
+    gap: 0.75rem 1.25rem;
+    flex-wrap: wrap;
   }
 
   .main {
@@ -393,5 +394,31 @@ a.pub-title:hover {
 
   .section {
     padding: 1.5rem 0;
+  }
+
+  /* Stack the photo above the bio so the text gets full width */
+  .about-with-photo {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .about-photo {
+    align-self: center;
+  }
+
+  /* Let the publications title and footnote wrap instead of clipping */
+  .section-header {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+  }
+
+  /* Stack the year above each course title so titles get full width */
+  .teaching-item {
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .teaching-term {
+    width: auto;
   }
 }
