@@ -297,6 +297,17 @@ a.pub-title:hover {
   margin-bottom: 0.2rem;
 }
 
+.pub-venue a {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.pub-venue a:hover {
+  color: #b08d6e;
+}
+
 .pub-note {
   font-size: 0.75rem;
   color: #b08d6e;
