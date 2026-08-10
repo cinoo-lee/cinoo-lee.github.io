@@ -11,6 +11,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 20px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  overflow-wrap: break-word;
 }
 
 a {
@@ -431,5 +433,46 @@ a.pub-title:hover {
 
   .teaching-term {
     width: auto;
+  }
+}
+
+/* Narrow phones: tighten gutters, keep line lengths comfortable */
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 1.25rem 1.25rem 0.75rem;
+  }
+
+  .sidebar-links {
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .topnav {
+    padding: 0.75rem 1.25rem;
+    gap: 0.5rem 1rem;
+  }
+
+  .main {
+    padding: 1.25rem 1.25rem 2rem;
+  }
+
+  .about-photo {
+    width: 128px;
+    height: 128px;
+  }
+
+  .pub-item {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Give the dense "Featured in" link lists room to breathe when wrapped */
+  .pub-note {
+    line-height: 1.9;
+  }
+
+  .pub-note a,
+  .sidebar-links a,
+  .topnav a {
+    display: inline-block;
   }
 }
